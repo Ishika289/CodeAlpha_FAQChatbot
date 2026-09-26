@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FAQ Chatbot</title>
+
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            background-color: #f0f4ff;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0, 1);
+        }
+
+        h1 {
+            color: #4a55a2;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #4a55a2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #anser {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>FAQ Chatbot</h1>
+
+        <p>
+            <Ask a question about our project.</p>
+
+                <input type="text" id="question" placeholder="Type your question hear...">
+
+                <br>
+
+                <button onclick="getAnswer()">Ask</button>
+
+                <p id="answer"></p>
+
+    </div>
+
+    <script>
+        function getAnswer() {
+
+            const question = document.getElementById("question").value.toLowerCase();
+
+            let answer = "";
+
+            if (question === "hello" || question === "hi") {
+                answer = "Hello! How can I help you?";
+            }
+            else if (question.includes("who created")) {
+                answer = "This project was created by me as part of my CodeAlpha internship.";
+            }
+            else if (question.includes("project")) {
+                answer = "This is an FAQ chatbot project created using HTML, CSS and Javascript.";
+            }
+            else if (question.includes("task")) {
+                answer = "This chatbot is Task 2 of the CodeAlpha Artificial Intelligence internship.";
+            }
+            else if (question.includes("help")) {
+                answer = "sure! Please ask me a question related to the project.";
+            }
+            else if (question.includes("thank")) {
+                answer = "You'r welcome!";
+            }
+            else if (question.includes("technology")) {
+                answer = "This chatbot uses HTML, CSS and JavaScript.";
+            }
+            else if (question.includes("html")) {
+                answer = "HTML is used to create the structure of a wabpage.";
+            }
+            else if (question.includes("css")) {
+                answer = "CSS is used to design and style a webpage.";
+            }
+            else if (question.includes("javascript")) {
+                answer = "JavaScript is used to make webpage interactive.";
+            }
+            else if (question.includes("purpose")) {
+                answer = "The purpose of this project is to provide quick answers to frequently asked questions.";
+            }
+            else if (question.includes("faq")) {
+                answer = "FAQ stands for Frequently Asked Questions. Thischatbot provides answers to common question.";
+            }
+            else if (question.includes("how does")) {
+                answer = "The chatbot checks the question and give a suitable answer from its predefined FAQs.";
+            }
+            else {
+                answer = "Sorry, I don't have an answer for this question.";
+            }
+
+            document.getElementById("answer").textContent = answer;
+        }
+    </script>
+
+</body>
+
+</html>
